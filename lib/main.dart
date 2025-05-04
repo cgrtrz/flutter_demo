@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_test_1/Screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,34 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(fontFamily: 'Nunito'),
-      home: Scaffold(
-        //backgroundColor: Colors.black87,
-        appBar: AppBar(
-          title: Text('MyApp'),
-          centerTitle: false,
-          backgroundColor: Colors.deepOrangeAccent,
-          titleTextStyle: TextStyle(
-            color: Colors.black,
-            fontFamily: 'Nunito',
-            fontSize: 24,
-          ),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.asset('assets/images/image.jpg'),
-              Text('Hello World!', style: TextStyle(color: Colors.yellow)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [Text('Aaaaaa'), Text('Bbbbbb')],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+    return MaterialApp(home: HomeScreen());
   }
 }
